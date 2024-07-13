@@ -1,0 +1,56 @@
+[
+  {
+    "id": "B1038",
+    "name": "Fried Chicken",
+    "price": 1200.0,
+    "discount": 0,
+    "category": "Chicken",
+    "portion": "Small",
+    "image": "images/products/item_images/chicken/fried_chicken.jpg"
+  },
+  {
+    "id": "B1039",
+    "name": "Fried Chicken",
+    "price": 2300.0,
+    "discount": 10,
+    "category": "Chicken",
+    "portion": "Regular",
+    "image": "images/products/item_images/chicken/fried_chicken.jpg"
+  },
+  {
+    "id": "B1040",
+    "name": "Fried Chicken",
+    "price": 3100.0,
+    "discount": 5,
+    "category": "Chicken",
+    "portion": "Large",
+    "image": "images/products/item_images/chicken/fried_chicken.jpg"
+  },
+  {
+    "id": "B1041",
+    "name": "Hot Wings",
+    "price": 2400.0,
+    "discount": 0,
+    "category": "Chicken",
+    "portion": "Large",
+    "image": "images/products/item_images/chicken/chicken_wings.jpg"
+  },
+  {
+    "id": "B1042",
+    "name": "Devilled Chicken",
+    "price": 900.0,
+    "discount": 0,
+    "category": "Chicken",
+    "portion": "Large",
+    "image": "images/products/item_images/chicken/devilled_chicken.jpg"
+  },
+  {
+    "id": "B1043",
+    "name": "BBQ Chicken",
+    "price": 2100.0,
+    "discount": 0,
+    "category": "Chicken",
+    "portion": "Regular",
+    "image": "images/products/item_images/chicken/bbq_chicken.jpg"
+  }
+]

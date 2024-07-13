@@ -1,0 +1,83 @@
+[
+  {
+    "id": "B1016",
+    "name": "Crispy Chicken Submarine",
+    "price": 2000.0,
+    "discount": 0,
+    "category": "Submarines",
+    "portion": "Large",
+    "image": "images/products/item_images/submarine/crispy_chicken_submarine.jpg"
+  },
+  {
+    "id": "B1017",
+    "name": "Crispy Chicken Submarine",
+    "price": 1500.0,
+    "discount": 0,
+    "category": "Submarines",
+    "portion": "Regular",
+    "image": "images/products/item_images/submarine/crispy_chicken_submarine.jpg"
+  },
+  {
+    "id": "B1018",
+    "name": "Chicken Submarine",
+    "price": 1800.0,
+    "discount": 3,
+    "category": "Submarines",
+    "portion": "Large",
+    "image": "images/products/item_images/submarine/chicken_submarine.jpg"
+  },
+  {
+    "id": "B1019",
+    "name": "Chicken Submarine",
+    "price": 1400.0,
+    "discount": 0,
+    "category": "Submarines",
+    "portion": "Regular",
+    "image": "images/products/item_images/submarine/chicken_submarine.jpg"
+  },
+  {
+    "id": "B1020",
+    "name": "Grinder Submarine",
+    "price": 2300.0,
+    "discount": 0,
+    "category": "Submarines",
+    "portion": "Regular",
+    "image": "images/products/item_images/submarine/grinder_submarine.jpg"
+  },
+  {
+    "id": "B1021",
+    "name": "Cheese Submarine",
+    "price": 2200.0,
+    "discount": 0,
+    "category": "Submarines",
+    "portion": "Regular",
+    "image": "images/products/item_images/submarine/cheese_submarine.jpg"
+  },
+  {
+    "id": "B1022",
+    "name": "Double Cheese n Chicken Submarine",
+    "price": 1900.0,
+    "discount": 16,
+    "category": "Submarines",
+    "portion": "Regular",
+    "image": "images/products/item_images/submarine/cheese_chicken_submarine.jpg"
+  },
+  {
+    "id": "B1023",
+    "name": "Special Horgie Submarine",
+    "price": 2800.0,
+    "discount": 0,
+    "category": "Submarines",
+    "portion": "Regular",
+    "image": "images/products/item_images/submarine/crispy_chicken_submarine.jpg"
+  },
+  {
+    "id": "B1024",
+    "name": "MOS Special Submarine",
+    "price": 3000.0,
+    "discount": 0,
+    "category": "Submarines",
+    "portion": "Regular",
+    "image": "images/products/item_images/submarine/mos_special_submarine.jpg"
+  }
+]

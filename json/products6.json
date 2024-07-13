@@ -1,0 +1,38 @@
+[
+  {
+    "id": "B1044",
+    "name": "Pepsi",
+    "price": 990.0,
+    "discount": 5,
+    "category": "Beverages",
+    "portion": "330 ml",
+    "image": "images/products/item_images/drink/pepsi.jpg"
+  },
+  {
+    "id": "B1045",
+    "name": "Coca-Cola",
+    "price": 1230.0,
+    "discount": 0,
+    "category": "Beverages",
+    "portion": "330 ml",
+    "image": "images/products/item_images/drink/coca_cola.jpg"
+  },
+  {
+    "id": "B1046",
+    "name": "Sprite",
+    "price": 1500.0,
+    "discount": 3,
+    "category": "Beverages",
+    "portion": "330 ml",
+    "image": "images/products/item_images/drink/sprite.jpg"
+  },
+  {
+    "id": "B1047",
+    "name": "Mirinda",
+    "price": 850.0,
+    "discount": 7,
+    "category": "Beverages",
+    "portion": "330 ml",
+    "image": "images/products/item_images/drink/mirinda.jpg"
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "id": "B1031",
+    "name": "Chicken n Cheese Pasta",
+    "price": 1600.0,
+    "discount": 15,
+    "category": "Pasta",
+    "portion": "Regular",
+    "image": "images/products/item_images/pasta/chicken_cheese_pasta.jpg"
+  },
+  {
+    "id": "B1032",
+    "name": "Chicken Penne Pasta",
+    "price": 1700.0,
+    "discount": 0,
+    "category": "Pasta",
+    "portion": "Regular",
+    "image": "images/products/item_images/pasta/penne_pasta.jpg"
+  },
+  {
+    "id": "B1033",
+    "name": "Ground Turkey Pasta Bake",
+    "price": 2900.0,
+    "discount": 10,
+    "category": "Pasta",
+    "portion": "Regular",
+    "image": "images/products/item_images/pasta/pasta_baked.jpg"
+  },
+  {
+    "id": "B1034",
+    "name": "Creamy Shrimp Pasta",
+    "price": 2000.0,
+    "discount": 0,
+    "category": "Pasta",
+    "portion": "Regular",
+    "image": "images/products/item_images/pasta/creamy_shrimp_pasta.jpg"
+  },
+  {
+    "id": "B1035",
+    "name": "Lemon Butter Pasta",
+    "price": 1950.0,
+    "discount": 0,
+    "category": "Pasta",
+    "portion": "Regular",
+    "image": "images/products/item_images/pasta/butter_pasta.jpg"
+  },
+  {
+    "id": "B1036",
+    "name": "Tagliatelle Pasta",
+    "price": 2400.0,
+    "discount": 1,
+    "category": "Pasta",
+    "portion": "Regular",
+    "image": "images/products/item_images/pasta/tagliatelle_pasta.jpg"
+  },
+  {
+    "id": "B1037",
+    "name": "Baked Ravioli",
+    "price": 2000.0,
+    "discount": 1,
+    "category": "Pasta",
+    "portion": "Regular",
+    "image": "images/products/item_images/pasta/baked_ravioli.jpg"
+  }
+]

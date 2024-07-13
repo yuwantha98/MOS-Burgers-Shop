@@ -1,0 +1,128 @@
+[
+  {
+    "id": "B1001",
+    "name": "Classic Burger",
+    "price": 750.0,
+    "discount": 0,
+    "category": "Burgers",
+    "portion": "Regular",
+    "image": "images/products/item_images/burger/1.png"
+  },
+  {
+    "id": "B1002",
+    "name": "Classic Burger",
+    "price": 1500.0,
+    "discount": 15,
+    "category": "Burgers",
+    "portion": "Large",
+    "image": "images/products/item_images/burger/1.png"
+  },
+  {
+    "id": "B1003",
+    "name": "Turkey Burger",
+    "price": 1600.0,
+    "discount": 0,
+    "category": "Burgers",
+    "portion": "Regular",
+    "image": "images/products/item_images/burger/2.png"
+  },
+  {
+    "id": "B1004",
+    "name": "Chicken Burger",
+    "price": 1400.0,
+    "discount": 0,
+    "category": "Burgers",
+    "portion": "Large",
+    "image": "images/products/item_images/burger/3.png"
+  },
+  {
+    "id": "B1005",
+    "name": "Chicken Burger",
+    "price": 800.0,
+    "discount": 20,
+    "category": "Burgers",
+    "portion": "Regular",
+    "image": "images/products/item_images/burger/3.png"
+  },
+  {
+    "id": "B1006",
+    "name": "Cheese Burger",
+    "price": 1000.0,
+    "discount": 0,
+    "category": "Burgers",
+    "portion": "Large",
+    "image": "images/products/item_images/burger/4.png"
+  },
+  {
+    "id": "B1007",
+    "name": "Cheese Burger",
+    "price": 600.0,
+    "discount": 0,
+    "category": "Burgers",
+    "portion": "Regular",
+    "image": "images/products/item_images/burger/4.png"
+  },
+  {
+    "id": "B1008",
+    "name": "Bacon Burger",
+    "price": 650.0,
+    "discount": 15,
+    "category": "Burgers",
+    "portion": "Regular",
+    "image": "images/products/item_images/burger/5.png"
+  },
+  {
+    "id": "B1009",
+    "name": "Shawarma Burger",
+    "price": 800.0,
+    "discount": 0,
+    "category": "Burgers",
+    "portion": "Regular",
+    "image": "images/products/item_images/burger/6.png"
+  },
+  {
+    "id": "B1010",
+    "name": "Olive Burger",
+    "price": 1800.0,
+    "discount": 0,
+    "category": "Burgers",
+    "portion": "Regular",
+    "image": "images/products/item_images/burger/7.png"
+  },
+  {
+    "id": "B1012",
+    "name": "Double-Cheese Burger",
+    "price": 1250.0,
+    "discount": 20,
+    "category": "Burgers",
+    "portion": "Regular",
+    "image": "images/products/item_images/burger/8.png"
+  },
+  {
+    "id": "B1013",
+    "name": "Crispy Chicken Burger",
+    "price": 1200.0,
+    "discount": 0,
+    "category": "Burgers",
+    "portion": "Regular",
+    "image": "images/products/item_images/burger/9.png"
+  },
+  {
+    "id": "B1014",
+    "name": "Crispy Chicken Burger",
+    "price": 1600.0,
+    "discount": 10,
+    "category": "Burgers",
+    "portion": "Large",
+    "image": "images/products/item_images/burger/9.png"
+  },
+  {
+    "id": "B1015",
+    "name": "Paneer Burger",
+    "price": 900.0,
+    "discount": 0,
+    "category": "Burgers",
+    "portion": "Regular",
+    "image": "images/products/item_images/burger/10.png"
+  }
+]
