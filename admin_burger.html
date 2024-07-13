@@ -32,59 +32,111 @@
   <body class="d-flex flex-column min-vh-100">
     <!--Header-->
 
-    <div class="container sticky">
-      <header
-        class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
-      >
-        <a
-          href="https://www.google.com/"
-          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
-        >
-          <h1 id="logo-text">Mos <span id="headerSpan">Burgers</span></h1>
-        </a>
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary position-fixed w-100"
+      style="z-index: 1000"
+    >
+      <div class="container-fluid">
+        <img src="images/logo.png" alt="logo" class="logo1" />
+        <img src="images/logo2.JPG" alt="logo" class="logo2" />
+        <h3 class="nameNav">MOS BURGER</h3>
 
-        <ul class="nav nav-pills">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="Menu.html" class="nav-link active">Menu</a>
-          </li>
-          <li class="nav-item">
-            <a href="AboutUs.html" class="nav-link">About us</a>
-          </li>
-          <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
-          <li class="nav-item">
-            <a href="customerLogin.html" class="nav-link">Login</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="icon-cart" role="button" aria-expanded="false">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 18 20"
-                width="40"
-                height="40"
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item1">
+              <a class="nav-link active" aria-current="page" href="Menu.html"
+                >MAINS</a
               >
-                <path
-                  stroke="rgba(87, 87, 87, 1)"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"
-                />
-              </svg>
-              <span class="count-1">0</span>
-            </a>
-          </li>
-          <!-- <li><span class="count">0</span></li> -->
-        </ul>
-      </header>
+            </li>
+            <li class="nav-item2">
+              <a
+                id="beveragesLink"
+                class="nav-link"
+                value="products6"
+                href="Beverages.html"
+                onclick="toggleButtons()"
+                >BEVERAGES</a
+              >
+            </li>
+          </ul>
+          <button type="button" class="btn2 btn-danger fw-bold nav-btn">
+            Log out
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!--Header-->
+    <br /><br /><br />
+    <div class="container col-12">
+      <div class="row">
+        <div class="header-button col-8 button-container">
+          <button
+            type="button"
+            class="btn btn-danger fw-bold yuwa"
+            onclick="activateButton(this)"
+            value="products1"
+          >
+            Burgers
+          </button>
+          <button
+            type="button"
+            class="btn btn-danger fw-bold yuwa"
+            onclick="activateButton(this)"
+            value="products6"
+            style="display: none"
+          >
+            Beverages
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-danger fw-bold yuwa"
+            onclick="activateButton(this)"
+            value="products2"
+          >
+            Submarines
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-danger fw-bold yuwa"
+            onclick="activateButton(this)"
+            value="products3"
+          >
+            Fries
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-danger fw-bold yuwa"
+            onclick="activateButton(this)"
+            value="products4"
+          >
+            Pasta
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-danger fw-bold yuwa"
+            onclick="activateButton(this)"
+            value="products5"
+          >
+            Chicken
+          </button>
+        </div>
+      </div>
     </div>
 
     <!-- Content -->
 
-    <div class="container mb-4">
+    <!-- <div class="container mb-4">
       <div class="row">
         <div class="col-2">
           <input type="text" name="" id="txtSearch" placeholder="Search" />
@@ -140,7 +192,7 @@
           </button>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="container">
       <div class="listProduct">
@@ -192,51 +244,6 @@
     <div class="container">
       <!-- Toast -->
       <div id="toastBox"></div>
-    </div>
-
-    <!-- Footer -->
-    <div class="container mt-auto">
-      <footer
-        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
-      >
-        <p class="col-md-4 mb-0 text-body-secondary">
-          &copy; 2024 Company, Inc
-        </p>
-
-        <a
-          href="index.html"
-          class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
-        >
-          <img
-            src="images/logo-burger.png"
-            class="d-block mx-lg-auto img-fluid"
-            alt="Bootstrap Themes"
-            width="100"
-            height="500"
-            loading="lazy"
-          />
-        </a>
-
-        <ul class="nav col-md-4 justify-content-end">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link px-2 text-body-secondary"
-              >Home</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              href="customerLogin.html"
-              class="nav-link px-2 text-body-secondary"
-              >Login</a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="AboutUs.html" class="nav-link px-2 text-body-secondary"
-              >About</a
-            >
-          </li>
-        </ul>
-      </footer>
     </div>
 
     <!--End-->

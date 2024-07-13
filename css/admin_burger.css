@@ -35,26 +35,17 @@ body {
   top: -9px;
   left: 25px;
 }
-.logo-cart {
-  width: 80px;
-  height: 30px;
-  position: relative;
-  top: -8px;
-  right: -25px;
+.btn2 {
+  margin-bottom: 13px;
+  margin-right: 3%;
 }
-.bi-cart {
-  width: 80px;
-  height: 30px;
-  color: #ffffff;
-  position: relative;
-  top: -5px;
-  right: 43px;
-}
-.logo-cart-count {
-  color: #c32b2f;
-  position: relative;
-  top: -5px;
-  left: -85px;
+.nav-btn {
+  padding: 5px 24px;
+  font-size: 17px;
+  border: none;
+  border-radius: 23px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 .nameNav {
   font-weight: bold;
