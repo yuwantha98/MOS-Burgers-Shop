@@ -6,7 +6,7 @@
     "discount": 0,
     "category": "Fries",
     "portion": "Medium",
-    "image": "images/products/item_images/fries/steak_fries.jpg"
+    "image": "images/products/item_images/fries/1.webp"
   },
   {
     "id": "B1027",
@@ -15,7 +15,7 @@
     "discount": 0,
     "category": "Fries",
     "portion": "Large",
-    "image": "images/products/item_images/fries/french_fries.jpg"
+    "image": "images/products/item_images/fries/1.webp"
   },
   {
     "id": "B1028",
@@ -24,7 +24,7 @@
     "discount": 0,
     "category": "Fries",
     "portion": "Medium",
-    "image": "images/products/item_images/fries/french_fries.jpg"
+    "image": "images/products/item_images/fries/1.webp"
   },
   {
     "id": "B1029",
@@ -33,7 +33,7 @@
     "discount": 0,
     "category": "Fries",
     "portion": "Small",
-    "image": "images/products/item_images/fries/french_fries.jpg"
+    "image": "images/products/item_images/fries/1.webp"
   },
   {
     "id": "B1030",
@@ -42,6 +42,6 @@
     "discount": 0,
     "category": "Fries",
     "portion": "Large",
-    "image": "images/products/item_images/fries/sweet_fries.jpg"
+    "image": "images/products/item_images/fries/1.webp"
   }
 ]

@@ -6,7 +6,7 @@
     "discount": 5,
     "category": "Beverages",
     "portion": "330 ml",
-    "image": "images/products/item_images/drink/pepsi.jpg"
+    "image": "images/products/item_images/drink/1.png"
   },
   {
     "id": "B1045",
@@ -15,7 +15,7 @@
     "discount": 0,
     "category": "Beverages",
     "portion": "330 ml",
-    "image": "images/products/item_images/drink/coca_cola.jpg"
+    "image": "images/products/item_images/drink/2.webp"
   },
   {
     "id": "B1046",
@@ -24,7 +24,7 @@
     "discount": 3,
     "category": "Beverages",
     "portion": "330 ml",
-    "image": "images/products/item_images/drink/sprite.jpg"
+    "image": "images/products/item_images/drink/3.png"
   },
   {
     "id": "B1047",
@@ -33,6 +33,6 @@
     "discount": 7,
     "category": "Beverages",
     "portion": "330 ml",
-    "image": "images/products/item_images/drink/mirinda.jpg"
+    "image": "images/products/item_images/drink/4.png"
   }
 ]

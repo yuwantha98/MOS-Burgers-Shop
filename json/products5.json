@@ -6,7 +6,7 @@
     "discount": 0,
     "category": "Chicken",
     "portion": "Small",
-    "image": "images/products/item_images/chicken/fried_chicken.jpg"
+    "image": "images/products/item_images/chicken/1.jpg"
   },
   {
     "id": "B1039",
@@ -15,7 +15,7 @@
     "discount": 10,
     "category": "Chicken",
     "portion": "Regular",
-    "image": "images/products/item_images/chicken/fried_chicken.jpg"
+    "image": "images/products/item_images/chicken/2.jpg"
   },
   {
     "id": "B1040",
@@ -24,7 +24,7 @@
     "discount": 5,
     "category": "Chicken",
     "portion": "Large",
-    "image": "images/products/item_images/chicken/fried_chicken.jpg"
+    "image": "images/products/item_images/chicken/3.jpg"
   },
   {
     "id": "B1041",
@@ -33,7 +33,7 @@
     "discount": 0,
     "category": "Chicken",
     "portion": "Large",
-    "image": "images/products/item_images/chicken/chicken_wings.jpg"
+    "image": "images/products/item_images/chicken/4.jpg"
   },
   {
     "id": "B1042",
@@ -42,7 +42,7 @@
     "discount": 0,
     "category": "Chicken",
     "portion": "Large",
-    "image": "images/products/item_images/chicken/devilled_chicken.jpg"
+    "image": "images/products/item_images/chicken/5.jpg"
   },
   {
     "id": "B1043",
@@ -51,6 +51,6 @@
     "discount": 0,
     "category": "Chicken",
     "portion": "Regular",
-    "image": "images/products/item_images/chicken/bbq_chicken.jpg"
+    "image": "images/products/item_images/chicken/6.jpg"
   }
 ]

@@ -6,7 +6,7 @@
     "discount": 0,
     "category": "Submarines",
     "portion": "Large",
-    "image": "images/products/item_images/submarine/crispy_chicken_submarine.jpg"
+    "image": "images/products/item_images/submarine/1.webp"
   },
   {
     "id": "B1017",
@@ -15,7 +15,7 @@
     "discount": 0,
     "category": "Submarines",
     "portion": "Regular",
-    "image": "images/products/item_images/submarine/crispy_chicken_submarine.jpg"
+    "image": "images/products/item_images/submarine/1.webp"
   },
   {
     "id": "B1018",
@@ -24,7 +24,7 @@
     "discount": 3,
     "category": "Submarines",
     "portion": "Large",
-    "image": "images/products/item_images/submarine/chicken_submarine.jpg"
+    "image": "images/products/item_images/submarine/3.webp"
   },
   {
     "id": "B1019",
@@ -33,7 +33,7 @@
     "discount": 0,
     "category": "Submarines",
     "portion": "Regular",
-    "image": "images/products/item_images/submarine/chicken_submarine.jpg"
+    "image": "images/products/item_images/submarine/3.webp"
   },
   {
     "id": "B1020",
@@ -42,7 +42,7 @@
     "discount": 0,
     "category": "Submarines",
     "portion": "Regular",
-    "image": "images/products/item_images/submarine/grinder_submarine.jpg"
+    "image": "images/products/item_images/submarine/5.webp"
   },
   {
     "id": "B1021",
@@ -51,7 +51,7 @@
     "discount": 0,
     "category": "Submarines",
     "portion": "Regular",
-    "image": "images/products/item_images/submarine/cheese_submarine.jpg"
+    "image": "images/products/item_images/submarine/4.webp"
   },
   {
     "id": "B1022",
@@ -60,7 +60,7 @@
     "discount": 16,
     "category": "Submarines",
     "portion": "Regular",
-    "image": "images/products/item_images/submarine/cheese_chicken_submarine.jpg"
+    "image": "images/products/item_images/submarine/2.webp"
   },
   {
     "id": "B1023",
@@ -69,7 +69,7 @@
     "discount": 0,
     "category": "Submarines",
     "portion": "Regular",
-    "image": "images/products/item_images/submarine/crispy_chicken_submarine.jpg"
+    "image": "images/products/item_images/submarine/6.webp"
   },
   {
     "id": "B1024",
@@ -78,6 +78,6 @@
     "discount": 0,
     "category": "Submarines",
     "portion": "Regular",
-    "image": "images/products/item_images/submarine/mos_special_submarine.jpg"
+    "image": "images/products/item_images/submarine/7.webp"
   }
 ]
