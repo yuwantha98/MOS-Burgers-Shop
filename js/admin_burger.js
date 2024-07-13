@@ -15,8 +15,6 @@ function activateButton(button) {
 
 function activateButton(value) {
   console.log("Clicked value:", value);
-  // Eka thiyenawa products1, products2, products3, products4, products5 kiyala
-  // JSON file eken data load karanna logic eka add karanawa
 }
 
 //==========================================
@@ -101,7 +99,10 @@ const addDataToHTML = () => {
         <div class="discount">${product.discount}%</div>
         <div class="portion">${product.portion}</div>
         <div class="price">Rs.${product.price}</div>
-        <button class="addCart">Add to Cart</button>`;
+        <div>
+        <button class="addCart">Edit</button>
+        <button class="addCart">Delete</button>
+        </div>`;
       listProductHTML.appendChild(newProduct);
     });
   }
