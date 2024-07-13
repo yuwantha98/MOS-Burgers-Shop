@@ -89,7 +89,7 @@ let listProducts = [];
 let carts = [];
 
 const initApp = () => {
-  loadData("json/products1.json");
+  loadData("json/products3.json");
 };
 
 initApp();
