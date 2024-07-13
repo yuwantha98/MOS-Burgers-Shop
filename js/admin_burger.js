@@ -40,8 +40,8 @@ function activateButton(clickedButton) {
   clickedButton.classList.remove("btn-outline-danger");
   clickedButton.classList.add("btn-danger");
 
-  var buttonValue = clickedButton.value;
-  loadData("json/" + buttonValue + ".json");
+  // var buttonValue = clickedButton.value;
+  // loadData("json/" + buttonValue + ".json");
 }
 
 // New part
@@ -100,12 +100,39 @@ const addDataToHTML = () => {
         <div class="portion">${product.portion}</div>
         <div class="price">Rs.${product.price}</div>
         <div>
-        <button class="addCart">Edit</button>
-        <button class="addCart">Delete</button>
+        <button class="addCart"><i class="bi bi-pencil"></i></button>
+        <button class="addCart"><i class="bi bi-trash3"></i></button>
         </div>`;
       listProductHTML.appendChild(newProduct);
     });
   }
+  for (let i = 0; i < 1; i++) {
+    let product = {
+      id: 1,
+      name: "Product Name",
+      discount: "product discount",
+      portion: "Large",
+      price: "Price",
+      image: "images/add.png",
+    };
+
+    let newProduct = document.createElement("div");
+    newProduct.classList.add("item");
+    newProduct.dataset.id = product.id;
+    newProduct.innerHTML = `
+    <img src="${product.image}" class="add-image" alt="">
+    <h2>${product.name}</h2>
+    <div class="discount">${product.discount}%</div>
+    <div class="portion">${product.portion}</div>
+    <div class="price">Rs ${product.price}</div>
+    <button class="add-item">Add Item</button>`;
+
+    listProductHTML.appendChild(newProduct);
+  }
+
+  //============================================
+
+  //============================================
 };
 
 listProductHTML.addEventListener("click", (event) => {

@@ -577,3 +577,14 @@ div.col-2:nth-child(1) > input:nth-child(1) {
   flex: 1;
   text-align: center;
 }
+
+/* ===================================  */
+
+.add-image {
+  margin-left: 10px;
+  height: 150px;
+  margin-bottom: 42px;
+}
+.container {
+  margin-bottom: 20px;
+}
