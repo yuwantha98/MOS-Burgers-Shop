@@ -2,7 +2,7 @@
   {
     "id": "B1001",
     "name": "Classic Burger",
-    "price": 750.0,
+    "price": 750,
     "discount": 0,
     "category": "Burgers",
     "portion": "Regular",
@@ -11,7 +11,7 @@
   {
     "id": "B1002",
     "name": "Classic Burger",
-    "price": 1500.0,
+    "price": 1500,
     "discount": 15,
     "category": "Burgers",
     "portion": "Large",
@@ -20,7 +20,7 @@
   {
     "id": "B1003",
     "name": "Turkey Burger",
-    "price": 1600.0,
+    "price": 1600,
     "discount": 0,
     "category": "Burgers",
     "portion": "Regular",
@@ -29,7 +29,7 @@
   {
     "id": "B1004",
     "name": "Chicken Burger",
-    "price": 1400.0,
+    "price": 1400,
     "discount": 0,
     "category": "Burgers",
     "portion": "Large",
@@ -38,7 +38,7 @@
   {
     "id": "B1005",
     "name": "Chicken Burger",
-    "price": 800.0,
+    "price": 800,
     "discount": 20,
     "category": "Burgers",
     "portion": "Regular",
@@ -47,7 +47,7 @@
   {
     "id": "B1006",
     "name": "Cheese Burger",
-    "price": 1000.0,
+    "price": 1000,
     "discount": 0,
     "category": "Burgers",
     "portion": "Large",
@@ -56,7 +56,7 @@
   {
     "id": "B1007",
     "name": "Cheese Burger",
-    "price": 600.0,
+    "price": 600,
     "discount": 0,
     "category": "Burgers",
     "portion": "Regular",
@@ -65,7 +65,7 @@
   {
     "id": "B1008",
     "name": "Bacon Burger",
-    "price": 650.0,
+    "price": 650,
     "discount": 15,
     "category": "Burgers",
     "portion": "Regular",
@@ -74,7 +74,7 @@
   {
     "id": "B1009",
     "name": "Shawarma Burger",
-    "price": 800.0,
+    "price": 800,
     "discount": 0,
     "category": "Burgers",
     "portion": "Regular",
@@ -83,7 +83,7 @@
   {
     "id": "B1010",
     "name": "Olive Burger",
-    "price": 1800.0,
+    "price": 1800,
     "discount": 0,
     "category": "Burgers",
     "portion": "Regular",
@@ -92,7 +92,7 @@
   {
     "id": "B1012",
     "name": "Double-Cheese Burger",
-    "price": 1250.0,
+    "price": 1250,
     "discount": 20,
     "category": "Burgers",
     "portion": "Regular",
@@ -101,7 +101,7 @@
   {
     "id": "B1013",
     "name": "Crispy Chicken Burger",
-    "price": 1200.0,
+    "price": 1200,
     "discount": 0,
     "category": "Burgers",
     "portion": "Regular",
@@ -110,7 +110,7 @@
   {
     "id": "B1014",
     "name": "Crispy Chicken Burger",
-    "price": 1600.0,
+    "price": 1600,
     "discount": 10,
     "category": "Burgers",
     "portion": "Large",
@@ -119,10 +119,18 @@
   {
     "id": "B1015",
     "name": "Paneer Burger",
-    "price": 900.0,
+    "price": 900,
     "discount": 0,
     "category": "Burgers",
     "portion": "Regular",
     "image": "images/products/item_images/burger/10.png"
+  },
+  {
+    "id": "B1101",
+    "name": "yuwa",
+    "price": 1000,
+    "discount": 10,
+    "portion": "Regular",
+    "image": "images/products/item_images/burger/9.png"
   }
 ]
