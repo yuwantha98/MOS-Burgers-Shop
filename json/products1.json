@@ -126,19 +126,11 @@
     "image": "images/products/item_images/burger/10.png"
   },
   {
-    "id": "B1101",
-    "name": "yuwa",
-    "price": 1000,
+    "id": "B1016",
+    "name": "Yuwa Burger",
+    "price": 1200,
     "discount": 10,
     "portion": "Regular",
-    "image": "images/products/item_images/burger/9.png"
-  },
-  {
-    "id": "B1103",
-    "name": "sahan",
-    "price": 950,
-    "discount": 12,
-    "portion": "large",
     "image": "images/products/item_images/burger/9.png"
   }
 ]
