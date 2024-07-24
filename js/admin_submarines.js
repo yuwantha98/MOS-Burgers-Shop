@@ -1,66 +1,84 @@
 const products = [
   {
-    id: "B1031",
-    name: "Chicken n Cheese Pasta",
-    price: 1600.0,
-    discount: 15,
-    category: "Pasta",
-    portion: "Regular",
-    image: "images/products/item_images/pasta/1.png",
-  },
-  {
-    id: "B1032",
-    name: "Chicken Penne Pasta",
-    price: 1700.0,
-    discount: 0,
-    category: "Pasta",
-    portion: "Regular",
-    image: "images/products/item_images/pasta/2.png",
-  },
-  {
-    id: "B1033",
-    name: "Ground Turkey Pasta Bake",
-    price: 2900.0,
-    discount: 10,
-    category: "Pasta",
-    portion: "Regular",
-    image: "images/products/item_images/pasta/3.png",
-  },
-  {
-    id: "B1034",
-    name: "Creamy Shrimp Pasta",
+    id: "B1016",
+    name: "Crispy Chicken Submarine",
     price: 2000.0,
     discount: 0,
-    category: "Pasta",
-    portion: "Regular",
-    image: "images/products/item_images/pasta/4.png",
+    category: "Submarines",
+    portion: "Large",
+    image: "images/products/item_images/submarine/1.webp",
   },
   {
-    id: "B1035",
-    name: "Lemon Butter Pasta",
-    price: 1950.0,
+    id: "B1017",
+    name: "Crispy Chicken Submarine",
+    price: 1500.0,
     discount: 0,
-    category: "Pasta",
+    category: "Submarines",
     portion: "Regular",
-    image: "images/products/item_images/pasta/5.png",
+    image: "images/products/item_images/submarine/1.webp",
   },
   {
-    id: "B1036",
-    name: "Tagliatelle Pasta",
-    price: 2400.0,
-    discount: 1,
-    category: "Pasta",
-    portion: "Regular",
-    image: "images/products/item_images/pasta/6.png",
+    id: "B1018",
+    name: "Chicken Submarine",
+    price: 1800.0,
+    discount: 3,
+    category: "Submarines",
+    portion: "Large",
+    image: "images/products/item_images/submarine/3.webp",
   },
   {
-    id: "B1037",
-    name: "Baked Ravioli",
-    price: 2000.0,
-    discount: 1,
-    category: "Pasta",
+    id: "B1019",
+    name: "Chicken Submarine",
+    price: 1400.0,
+    discount: 0,
+    category: "Submarines",
     portion: "Regular",
-    image: "images/products/item_images/pasta/1.png",
+    image: "images/products/item_images/submarine/3.webp",
+  },
+  {
+    id: "B1020",
+    name: "Grinder Submarine",
+    price: 2300.0,
+    discount: 0,
+    category: "Submarines",
+    portion: "Regular",
+    image: "images/products/item_images/submarine/5.webp",
+  },
+  {
+    id: "B1021",
+    name: "Cheese Submarine",
+    price: 2200.0,
+    discount: 0,
+    category: "Submarines",
+    portion: "Regular",
+    image: "images/products/item_images/submarine/4.webp",
+  },
+  {
+    id: "B1022",
+    name: "Double Cheese n Chicken Submarine",
+    price: 1900.0,
+    discount: 16,
+    category: "Submarines",
+    portion: "Regular",
+    image: "images/products/item_images/submarine/2.webp",
+  },
+  {
+    id: "B1023",
+    name: "Special Horgie Submarine",
+    price: 2800.0,
+    discount: 0,
+    category: "Submarines",
+    portion: "Regular",
+    image: "images/products/item_images/submarine/6.webp",
+  },
+  {
+    id: "B1024",
+    name: "MOS Special Submarine",
+    price: 3000.0,
+    discount: 0,
+    category: "Submarines",
+    portion: "Regular",
+    image: "images/products/item_images/submarine/7.webp",
   },
 ];
 
@@ -70,7 +88,7 @@ function addItemToList() {
   const price = parseFloat(document.getElementById("price").value);
   const discount = parseFloat(document.getElementById("discount").value);
   const portion = document.getElementById("portion").value;
-  const image = "images/products/item_images/pasta/5.png";
+  const image = "images/products/item_images/submarine/2.webp";
 
   if (id && name && !isNaN(price) && !isNaN(discount) && portion) {
     const newProduct = {
@@ -78,15 +96,16 @@ function addItemToList() {
       name: name,
       price: price,
       discount: discount,
-      category: "Pasta",
+      category: "Submarines",
       portion: portion,
       image: image,
     };
 
-    let storedPasta = JSON.parse(localStorage.getItem("storedPasta")) || [];
-    storedPasta.push(newProduct);
+    let storedSubmarines =
+      JSON.parse(localStorage.getItem("storedSubmarines")) || [];
+    storedSubmarines.push(newProduct);
 
-    localStorage.setItem("storedPasta", JSON.stringify(storedPasta));
+    localStorage.setItem("storedSubmarines", JSON.stringify(storedSubmarines));
 
     displayProducts();
   } else {
@@ -95,9 +114,12 @@ function addItemToList() {
 }
 
 function deleteProduct(productId) {
-  let storedPasta = JSON.parse(localStorage.getItem("storedPasta")) || [];
-  storedPasta = storedPasta.filter((product) => product.id !== productId);
-  localStorage.setItem("storedPasta", JSON.stringify(storedPasta));
+  let storedSubmarines =
+    JSON.parse(localStorage.getItem("storedSubmarines")) || [];
+  storedSubmarines = storedSubmarines.filter(
+    (product) => product.id !== productId
+  );
+  localStorage.setItem("storedSubmarines", JSON.stringify(storedSubmarines));
 
   displayProducts();
 }
@@ -106,9 +128,10 @@ function displayProducts() {
   const container = document.getElementById("product-container");
   container.innerHTML = ""; // Clear existing content
 
-  const storedPasta = JSON.parse(localStorage.getItem("storedPasta")) || [];
+  const storedSubmarines =
+    JSON.parse(localStorage.getItem("storedSubmarines")) || [];
 
-  [...products, ...storedPasta].forEach((product) => {
+  [...products, ...storedSubmarines].forEach((product) => {
     const productCard = document.createElement("div");
     productCard.classList.add("item");
     productCard.dataset.id = product.id;
@@ -152,7 +175,7 @@ function displayProducts() {
 }
 
 function redirectToAddItemPage() {
-  window.open("item_add_pasta.html", "_blank");
+  window.open("item_add_submarine.html", "_blank");
 }
 
 displayProducts();
@@ -160,7 +183,7 @@ displayProducts();
 //=======================================
 
 function redirectToEditPage(productId) {
-  window.open(`item_edit_pasta.html?id=${productId}`, "_blank");
+  window.open(`item_edit_submarine.html?id=${productId}`, "_blank");
 }
 
 function redirectToPage(pageUrl) {

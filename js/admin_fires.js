@@ -1,66 +1,48 @@
 const products = [
   {
-    id: "B1031",
-    name: "Chicken n Cheese Pasta",
-    price: 1600.0,
-    discount: 15,
-    category: "Pasta",
-    portion: "Regular",
-    image: "images/products/item_images/pasta/1.png",
-  },
-  {
-    id: "B1032",
-    name: "Chicken Penne Pasta",
-    price: 1700.0,
+    id: "B1026",
+    name: "Steak Fries",
+    price: 600.0,
     discount: 0,
-    category: "Pasta",
-    portion: "Regular",
-    image: "images/products/item_images/pasta/2.png",
+    category: "Fries",
+    portion: "Medium",
+    image: "images/products/item_images/fries/1.webp",
   },
   {
-    id: "B1033",
-    name: "Ground Turkey Pasta Bake",
-    price: 2900.0,
-    discount: 10,
-    category: "Pasta",
-    portion: "Regular",
-    image: "images/products/item_images/pasta/3.png",
-  },
-  {
-    id: "B1034",
-    name: "Creamy Shrimp Pasta",
-    price: 2000.0,
+    id: "B1027",
+    name: "French Fries",
+    price: 800.0,
     discount: 0,
-    category: "Pasta",
-    portion: "Regular",
-    image: "images/products/item_images/pasta/4.png",
+    category: "Fries",
+    portion: "Large",
+    image: "images/products/item_images/fries/1.webp",
   },
   {
-    id: "B1035",
-    name: "Lemon Butter Pasta",
-    price: 1950.0,
+    id: "B1028",
+    name: "French Fries",
+    price: 650.0,
     discount: 0,
-    category: "Pasta",
-    portion: "Regular",
-    image: "images/products/item_images/pasta/5.png",
+    category: "Fries",
+    portion: "Medium",
+    image: "images/products/item_images/fries/1.webp",
   },
   {
-    id: "B1036",
-    name: "Tagliatelle Pasta",
-    price: 2400.0,
-    discount: 1,
-    category: "Pasta",
-    portion: "Regular",
-    image: "images/products/item_images/pasta/6.png",
+    id: "B1029",
+    name: "French Fries (Small)",
+    price: 450.0,
+    discount: 0,
+    category: "Fries",
+    portion: "Small",
+    image: "images/products/item_images/fries/1.webp",
   },
   {
-    id: "B1037",
-    name: "Baked Ravioli",
-    price: 2000.0,
-    discount: 1,
-    category: "Pasta",
-    portion: "Regular",
-    image: "images/products/item_images/pasta/1.png",
+    id: "B1030",
+    name: "Sweet Potato Fries",
+    price: 600.0,
+    discount: 0,
+    category: "Fries",
+    portion: "Large",
+    image: "images/products/item_images/fries/1.webp",
   },
 ];
 
@@ -70,7 +52,7 @@ function addItemToList() {
   const price = parseFloat(document.getElementById("price").value);
   const discount = parseFloat(document.getElementById("discount").value);
   const portion = document.getElementById("portion").value;
-  const image = "images/products/item_images/pasta/5.png";
+  const image = "images/products/item_images/fries/1.webp";
 
   if (id && name && !isNaN(price) && !isNaN(discount) && portion) {
     const newProduct = {
@@ -78,15 +60,15 @@ function addItemToList() {
       name: name,
       price: price,
       discount: discount,
-      category: "Pasta",
+      category: "Fries",
       portion: portion,
       image: image,
     };
 
-    let storedPasta = JSON.parse(localStorage.getItem("storedPasta")) || [];
-    storedPasta.push(newProduct);
+    let storedFires = JSON.parse(localStorage.getItem("storedFires")) || [];
+    storedFires.push(newProduct);
 
-    localStorage.setItem("storedPasta", JSON.stringify(storedPasta));
+    localStorage.setItem("storedFires", JSON.stringify(storedFires));
 
     displayProducts();
   } else {
@@ -95,9 +77,9 @@ function addItemToList() {
 }
 
 function deleteProduct(productId) {
-  let storedPasta = JSON.parse(localStorage.getItem("storedPasta")) || [];
-  storedPasta = storedPasta.filter((product) => product.id !== productId);
-  localStorage.setItem("storedPasta", JSON.stringify(storedPasta));
+  let storedFires = JSON.parse(localStorage.getItem("storedFires")) || [];
+  storedFires = storedFires.filter((product) => product.id !== productId);
+  localStorage.setItem("storedFires", JSON.stringify(storedFires));
 
   displayProducts();
 }
@@ -106,9 +88,9 @@ function displayProducts() {
   const container = document.getElementById("product-container");
   container.innerHTML = ""; // Clear existing content
 
-  const storedPasta = JSON.parse(localStorage.getItem("storedPasta")) || [];
+  const storedFires = JSON.parse(localStorage.getItem("storedFires")) || [];
 
-  [...products, ...storedPasta].forEach((product) => {
+  [...products, ...storedFires].forEach((product) => {
     const productCard = document.createElement("div");
     productCard.classList.add("item");
     productCard.dataset.id = product.id;
@@ -152,7 +134,7 @@ function displayProducts() {
 }
 
 function redirectToAddItemPage() {
-  window.open("item_add_pasta.html", "_blank");
+  window.open("item_add_fries.html", "_blank");
 }
 
 displayProducts();
@@ -160,7 +142,7 @@ displayProducts();
 //=======================================
 
 function redirectToEditPage(productId) {
-  window.open(`item_edit_pasta.html?id=${productId}`, "_blank");
+  window.open(`item_edit_fries.html?id=${productId}`, "_blank");
 }
 
 function redirectToPage(pageUrl) {

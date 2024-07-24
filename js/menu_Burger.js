@@ -127,142 +127,176 @@ const products = [
   },
 ];
 
+//===============================================
+
+// Add item to list (localStorage)
 function addItemToList() {
   const id = document.getElementById("id").value;
   const name = document.getElementById("name").value;
   const price = parseFloat(document.getElementById("price").value);
   const discount = parseFloat(document.getElementById("discount").value);
   const portion = document.getElementById("portion").value;
-  const image = "images/products/item_images/burger/9.png";
+  const image = "images/products/item_images/burger/9.png"; // Default image
 
   if (id && name && !isNaN(price) && !isNaN(discount) && portion) {
     const newProduct = {
-      id: id,
-      name: name,
-      price: price,
-      discount: discount,
+      id,
+      name,
+      price,
+      discount,
       category: "Burgers",
-      portion: portion,
-      image: image,
+      portion,
+      image,
     };
 
     let storedBurgers = JSON.parse(localStorage.getItem("newBurger")) || [];
     storedBurgers.push(newProduct);
 
     localStorage.setItem("newBurger", JSON.stringify(storedBurgers));
-
     displayProducts();
   } else {
     alert("Please fill in all fields correctly.");
   }
 }
 
+// Delete product from list (localStorage)
 function deleteProduct(productId) {
   let storedBurgers = JSON.parse(localStorage.getItem("newBurger")) || [];
   storedBurgers = storedBurgers.filter((product) => product.id !== productId);
   localStorage.setItem("newBurger", JSON.stringify(storedBurgers));
-
   displayProducts();
 }
 
+// Function to display products and add 'Add to Cart' button
 function displayProducts() {
   const container = document.getElementById("product-container");
   container.innerHTML = ""; // Clear existing content
 
   const storedBurgers = JSON.parse(localStorage.getItem("newBurger")) || [];
-
   [...products, ...storedBurgers].forEach((product) => {
     const productCard = document.createElement("div");
     productCard.classList.add("item");
     productCard.dataset.id = product.id;
 
     productCard.innerHTML = `
-                    <img src="${product.image}" alt="${
-      product.name
-    }" class="img-fluid">
-                    <h2>${product.name}</h2>
-                    <div class="discount">${
-                      product.discount > 0
-                        ? `${product.discount}%`
-                        : "No discount"
-                    }</div>
-                    <div class="portion">${product.portion}</div>
-                    <div class="price">Rs.${product.price}</div>
-                    <div>
-                        <button class="btn btn-primary addCart" onclick="redirectToEditPage('${
-                          product.id
-                        }')"><i class="bi bi-pencil"></i></button>
-                        <button class="btn btn-danger delete-btn" onclick="deleteProduct('${
-                          product.id
-                        }')"><i class="bi bi-trash3"></i></button>
-                    </div>`;
-
+      <img src="${product.image}" alt="${product.name}" class="img-fluid">
+      <h2>${product.name}</h2>
+      <div class="discount">${
+        product.discount > 0 ? `${product.discount}%` : "No discount"
+      }</div>
+      <div class="portion">${product.portion}</div>
+      <div class="price">Rs.${product.price}</div>
+      <button class="addCart" onclick="addToCart('${
+        product.id
+      }')">Add to Cart</button>`;
     container.appendChild(productCard);
   });
 
-  const addItemCard2 = document.createElement("div");
-  addItemCard2.classList.add("item");
-  addItemCard2.dataset.id = "add-item";
-  addItemCard2.innerHTML = `
-                <img src="images/add.png" class="add-image" alt="Add Item">
-                <h2>Product Name</h2>
-                <div class="discount">Product discount</div>
-                <div class="portion">Large</div>
-                <div class="price">Price</div>
-                <button class="btn btn-success add-item" onclick="redirectToAddItemPage()">Add Item</button>`;
-
-  container.appendChild(addItemCard2);
+  updateCartCount();
 }
 
-function redirectToAddItemPage() {
-  window.open("item_add_burger.html", "_blank");
+// Function to add an item to the cart
+function addToCart(productId) {
+  const product = [
+    ...products,
+    ...(JSON.parse(localStorage.getItem("newBurger")) || []),
+  ].find((p) => p.id === productId);
+
+  if (product && product.id && product.name && product.price) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const existingProductIndex = cart.findIndex((p) => p.id === productId);
+
+    if (existingProductIndex > -1) {
+      cart[existingProductIndex].quantity =
+        (cart[existingProductIndex].quantity || 0) + 1;
+    } else {
+      product.quantity = 1;
+      cart.push(product);
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCart(); // Update cart display and totals immediately
+    showToast(`${product.name} added to cart!`);
+  }
 }
 
-displayProducts();
+// Function to display cart items and calculate totals
+function displayCart() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const cartContainer = document.querySelector(".listCart");
+  cartContainer.innerHTML = ""; // Clear existing cart items
 
-//=======================================
+  let totalPackingCharge = 0;
+  let totalDiscount = 0;
+  let totalPrice = 0;
 
-function redirectToEditPage(productId) {
-  window.open(`item_edit_burger.html?id=${productId}`, "_blank");
+  cart
+    .filter((product) => product && product.id && product.name && product.price) // Ensure the item is valid
+    .forEach((product) => {
+      const itemTotal = product.price * (product.quantity || 1);
+      const itemDiscount = (itemTotal * (product.discount || 0)) / 100;
+      const itemPriceAfterDiscount = itemTotal - itemDiscount;
+
+      totalPackingCharge += itemTotal;
+      totalDiscount += itemDiscount;
+      totalPrice += itemPriceAfterDiscount;
+
+      const cartItem = document.createElement("div");
+      cartItem.classList.add("item");
+      cartItem.innerHTML = `
+      <div class="cart-item-content">
+          <span class="cart-item-name">${product.name}</span>
+          <span class="cart-item-price">Rs.${product.price} x ${product.quantity}</span>
+          <button class="btn-danger btn-remove" onclick="removeFromCart('${product.id}')"><i class="bi bi-trash3"></i></button>
+      </div>`;
+
+      cartContainer.appendChild(cartItem);
+    });
+
+  document.getElementById("val_1").innerText = `Rs.${totalPackingCharge.toFixed(
+    2
+  )}`;
+  document.getElementById("val_2").innerText = `Rs.${totalDiscount.toFixed(2)}`;
+
+  document.getElementById(
+    "Payment"
+  ).innerHTML = `Payment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rs. ${totalPrice.toFixed(
+    2
+  )}`;
 }
+
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  document.getElementById("cartCount").innerText = cart.length - 1;
+}
+
+// Function to remove an item from the cart
+function removeFromCart(productId) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart = cart.filter((p) => p.id !== productId);
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  updateCart();
+}
+
+function updateCart() {
+  displayCart();
+  updateCartCount();
+}
+
+function showToast(message) {
+  const toastBox = document.getElementById("toastBox");
+  toastBox.innerHTML = `<div class="toast">${message}</div>`;
+  setTimeout(() => {
+    toastBox.innerHTML = "";
+  }, 3000);
+}
+
+window.onload = function () {
+  displayProducts();
+  displayCart();
+};
 
 function redirectToPage(pageUrl) {
   window.location.href = pageUrl;
 }
-
-//============================================================================================
-
-// function displayProducts1() {
-//   const container = document.getElementById("product-container1");
-//   container.innerHTML = ""; // Clear existing content
-
-//   const storedBurgers = JSON.parse(localStorage.getItem("newBurger")) || [];
-//   console.log("Stored Burgers:", storedBurgers); // Check if data is loaded correctly
-
-//   [...products, ...storedBurgers].forEach((product) => {
-//     const productCard = document.createElement("div");
-//     productCard.classList.add("item");
-//     productCard.dataset.id = product.id;
-
-//     productCard.innerHTML = `
-//       <img src="${product.image}" alt="${product.name}" class="img-fluid">
-//       <h2>${product.name}</h2>
-//       <div class="discount">${
-//         product.discount > 0 ? `${product.discount}%` : "No discount"
-//       }</div>
-//       <div class="portion">${product.portion}</div>
-//       <div class="price">Rs.${product.price}</div>
-//       <div>
-//         <button class="btn btn-primary addCart" onclick="redirectToEditPage('${
-//           product.id
-//         }')"><i class="bi bi-pencil"></i></button>
-//         <button class="btn btn-danger delete-btn" onclick="deleteProduct('${
-//           product.id
-//         }')"><i class="bi bi-trash3"></i></button>
-//       </div>`;
-
-//     container.appendChild(productCard);
-//   });
-// }
-
-// displayProducts1();

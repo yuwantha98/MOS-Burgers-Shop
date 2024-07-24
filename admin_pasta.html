@@ -21,7 +21,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
 
-    <title>Menu</title>
+    <title>Admin Menu</title>
     <link
       rel="icon"
       type="image/x-icon"
@@ -63,7 +63,10 @@
               >
             </li>
             <li class="nav-item2">
-              <a class="nav-link" aria-current="page" href="admin_beverage.html"
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="admin_beverages.html"
                 >BEVERAGES</a
               >
             </li>
@@ -119,53 +122,19 @@
     </div>
 
     <div class="container">
-      <div class="listProduct">
+      <div class="listProduct" id="product-container">
         <div class="item">
           <!-- addDataToHTML() -->
         </div>
       </div>
     </div>
 
-    <!-- Cart Tab -->
-
-    <div class="cartTab">
-      <h1 class="text-center">Shopping Cart</h1>
-      <div class="listCart">
-        <!-- items -->
-        <div class="item">
-          <!-- addCartToHTML -->
-        </div>
-      </div>
-
-      <table>
-        <tr>
-          <td class="lbl">Gross Amount</td>
-          <td>:</td>
-          <td id="val_1">0.00</td>
-        </tr>
-        <tr>
-          <td class="lbl">Discount</td>
-          <td>:</td>
-          <td id="val_2">0.00</td>
-        </tr>
-      </table>
-
-      <!-- cart tab controllers -->
-      <div class="btn">
-        <button class="close">Close</button>
-        <button class="checkOut">
-          <a href="checkOut.html" class="nav-link">Check Out</a>
-        </button>
-      </div>
-      <!-- ------------------- -->
-    </div>
-
-    <div class="container">
-      <!-- Toast -->
-      <div id="toastBox"></div>
-    </div>
-
     <!--End-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2KN4zKFdYzoCDdjWZJxB5mwbtTVThMy+G0TFQYtTxk9StlzCWojF7H8G5pB"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/admin_pasta.js"></script>
   </body>
 </html>
