@@ -184,7 +184,7 @@ function displayCart() {
 
 function updateCartCount() {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  document.getElementById("cartCount").innerText = cart.length - 1;
+  document.getElementById("cartCount").innerText = cart.length - 2;
 }
 
 // Function to remove an item from the cart
