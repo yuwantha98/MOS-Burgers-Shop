@@ -33,7 +33,7 @@ const products = [
     discount: 0,
     category: "Chicken",
     portion: "Large",
-    image: "images/products/item_images/chicken/1.jpg",
+    image: "images/products/item_images/chicken/4.jpg",
   },
   {
     id: "B1042",
